@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Parking System</title>
+</head>
+<body>
+    <h1>Smart Parking System</h1>
+    <form id="parking-form">
+        <label for="command">Enter Command:</label>
+        <input type="text" id="command" name="command" placeholder="Command (e.g., park ABC123 Red)">
+        <input type="button" value="Submit" onclick="executeCommand()">
+    </form>
+
+    <h2>Output:</h2>
+    <div id="output"></div>
+
+    <script>
+        function executeCommand() {
+            var commandInput = document.getElementById("command");
+            var command = commandInput.value;
+            commandInput.value = '';
+
+            // Implement the logic to send the command to your parking lot system
+            // You may use AJAX to send the command to the server and receive the response.
+
+            // For simplicity, we'll just display the command as output for now.
+            var outputDiv = document.getElementById("output");
+            outputDiv.innerHTML += command + "<br>";
+        }
+    </script>
+</body>
+</html>
